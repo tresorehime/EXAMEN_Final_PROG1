@@ -1,6 +1,5 @@
 
-
-function slugify (str) { 
+ function slugify (str) { 
     return str
         .toLowerCase()
         .normalize('NFD') 
@@ -13,12 +12,7 @@ function slugify (str) {
         .replace(/^-|-$/g, '')
 }
 
-console.log(slugify('Hello World'))
-console.log(slugify("Node.js en 2026"))
-console.log(slugify("Les secrets des ESM !")) 
-console.log(slugify("L'efficacité algorithmique")) 
-
-function truncate (text,maxlength) {
+ function truncate (text,maxlength) {
     if (typeof text !='string') {
         return console.log("ceci n est pas un string")
     }
@@ -42,21 +36,14 @@ function truncate (text,maxlength) {
     }
     return textTruncate
 }
-console.log(truncate('j ai marre ',20))
-
-function counterWords (phrase ){
+ function counterWords (phrase ){
     let decomposition = phrase.split(' ')
     let counter = decomposition.length
     return ("voici le nombre de mot :" + counter)
  }
- console.log(counterWords("j en ai rien a faire"))
+ 
+function EscapeHTML  (html){ 
 
- function EscapeHTML  (html){ 
-//     & à remplacer par  &amp;
-// < à remplacer par &lt;
-// > à remplacer par &gt;
-// " à remplacer par &quot;
-// ' à remplacer par &#39;
     let segmentation = html.split('')
     let transcription =""
     for (let index = 0; index < html.length; index++) {
@@ -78,4 +65,5 @@ function counterWords (phrase ){
     }
     return transcription
  }
- console.log(EscapeHTML('Il a dit "bonjour"'))
+
+export {slugify,truncate,EscapeHTML,counterWords};
