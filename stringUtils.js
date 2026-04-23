@@ -1,4 +1,3 @@
-
  function slugify (str) { 
     return str
         .toLowerCase()
@@ -36,7 +35,7 @@
     }
     return textTruncate
 }
- function counterWords (phrase ){
+ function countWords (phrase ){
     let decomposition = phrase.split(' ')
     let counter = decomposition.length
     return ("voici le nombre de mot :" + counter)
