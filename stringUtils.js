@@ -41,7 +41,7 @@
     return ("voici le nombre de mot :" + counter)
  }
  
-function EscapeHTML  (html){ 
+function escapeHTML  (html){ 
 
     let segmentation = html.split('')
     let transcription =""
@@ -65,4 +65,4 @@ function EscapeHTML  (html){
     return transcription
  }
 
-export {slugify,truncate,EscapeHTML,countWords};
+export {slugify,truncate,escapeHTML,countWords};
