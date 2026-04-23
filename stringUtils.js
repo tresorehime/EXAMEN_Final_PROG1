@@ -65,4 +65,4 @@ function EscapeHTML  (html){
     return transcription
  }
 
-export {slugify,truncate,EscapeHTML,counterWords};
+export {slugify,truncate,EscapeHTML,countWords};
